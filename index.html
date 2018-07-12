@@ -130,11 +130,13 @@
     </style>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper" id="app">
+    <div class="main-sidebar">
+        <textarea name="inputs" v-model="JSON.stringify(result)"></textarea>
+    </div>
     <div class="content-wrapper">
-        <div class="container-fluid" id="app">
+        <div class="container-fluid">
             <cc-inputs :source="result" @handle-data="handleData"></cc-inputs>
-            <textarea name="inputs" v-model="JSON.stringify(result)" style="display: none;"></textarea>
         </div>
     </div>
 </div>
