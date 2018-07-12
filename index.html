@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/AdminLTE.min.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.css" rel="stylesheet" type="text/css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+
+    <style>
+        @media (min-width: 1366px) {
+            .container-fluid {
+                padding-right: 150px;
+                padding-left: 150px;
+            }
+        }
+
+        .undefined {
+            height: 80px;
+            text-align: center;
+        }
+
+        .undefined > .btn-floating {
+            bottom: -38px;
+        }
+
+        .form-box.focus {
+            border-left: 3px solid transparent;
+            border-left-color: #4ca2ae !important;
+            box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, .2), 0 2px 6px 0 rgba(0, 0, 0, .24);
+            margin-bottom: 5px;
+        }
+
+        .form-box.focus .v-trash, .form-box.focus .add-more {
+            display: block;
+        }
+
+        .form-box.focus .v-remove-addon {
+            display: table-cell;
+        }
+
+        .form-box .v-remove-addon {
+            display: none;
+        }
+
+        .form-box .v-trash, .form-box .add-more {
+            display: none;
+        }
+
+        .form-box {
+            margin-bottom: 0;
+        }
+
+        .form-box > .box-body > .input-group {
+            margin-top: 7px;
+            margin-bottom: 7px;
+        }
+
+        .form-box > .box-body .input-group-addon {
+            border: 0;
+        }
+
+        .form-box > .box-body .form-control {
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+        }
+
+        .form-box > .box-header {
+            cursor: move;
+            color: #d3d3d3;
+        }
+
+        .form-box > .box-header .fa, .form-box > .box-footer .fa {
+            font-size: 22px;
+        }
+
+        .form-box .box-footer > * {
+            margin-right: 10px;
+        }
+
+        .add-more, .add-more:hover {
+            position: relative;
+            display: table;
+            border-collapse: separate;
+            margin-top: 10px;
+            color: #4ca2ae;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .fixed-btn {
+            position: fixed;
+            z-index: 998;
+            right: 35px;
+            bottom: 60px;
+            padding-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .btn-floating i {
+            display: inline-block;
+            width: inherit;
+            color: #fff;
+            text-align: center;
+        }
+
+        .btn-floating {
+            font-size: 1.625rem;
+            line-height: 61.1px;
+            display: inline-block;
+            width: 61.1px;
+            height: 61.1px;
+            position: relative;
+            z-index: 1;
+            vertical-align: middle;
+            overflow: hidden;
+            padding: 0;
+            border-radius: 50%;
+            margin: 10px;
+            background-color: #f44336 !important;
+            color: #fff;
+            cursor: pointer;
+            -webkit-transition: .3s;
+            transition: .3s;
+            -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="content-wrapper">
+        <div class="container-fluid" id="app">
+            <cc-inputs :source="result" @handle-data="handleData"></cc-inputs>
+            <textarea name="inputs" v-model="JSON.stringify(result)" style="display: none;"></textarea>
+        </div>
+    </div>
+</div>
+<script src="dist/app.js" type="text/javascript"></script>
+</body>
+</html>
