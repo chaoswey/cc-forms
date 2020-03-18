@@ -14,7 +14,7 @@
     "browser-sync-webpack-plugin": "^1.2.0",
     "cross-env": "^3.2.3",
     "laravel-mix": "^1.7.2",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "uniqid": "^5.0.3",
     "vue": "^2.5.13",
     "vuedraggable": "^2.16.0"
